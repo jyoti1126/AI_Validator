@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Add business details to your startup validation.">
+  <title>Business Details | StartValidate AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="business-details.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="StartValidate AI home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" role="img">
+          <path d="M16.8 4.4c4.1-.9 7.3.1 9.5 2.1.1 2.8-.8 5.5-2.7 8l-6.5 8.2-6.2-6.2 8.2-6.5c2.5-1.9 5.2-2.8 8-2.7" fill="#6875e9" opacity=".22"/>
+          <path d="M16.8 4.4c4.1-.9 7.3.1 9.5 2.1.1 2.8-.8 5.5-2.7 8l-6.5 8.2-6.2-6.2 8.2-6.5c2.5-1.9 5.2-2.8 8-2.7" fill="none" stroke="#5060d9" stroke-width="1.7" stroke-linejoin="round"/>
+          <circle cx="20.7" cy="10.2" r="2" fill="#5060d9"/>
+          <path d="m10.9 16.5-4.7 1.4 1.4-4.7m3.6 9.1-1.8 4.2 4.2-1.8" fill="none" stroke="#5060d9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span>StartValidate <strong>AI</strong></span>
+    </a>
+
+  </header>
+
+  <main class="page-shell">
+    <section class="onboarding" aria-labelledby="page-title">
+
+      <form class="business-form" id="business-form" novalidate>
+        <h1 id="page-title">Tell us more about your startup</h1>
+        <div class="form-grid">
+          <div class="form-column">
+            <div class="field-group">
+              <label for="target-customers">Target Customers</label>
+              <select id="target-customers" name="targetCustomers" required>
+                <option value="">Select target customers</option>
+                <option>Students</option>
+                <option>Working Professionals</option>
+                <option>Small Businesses</option>
+                <option>Families</option>
+                <option>General Consumers</option>
+                <option>Other</option>
+              </select>
+              <span class="field-error" id="target-customers-error"></span>
+            </div>
+
+            <div class="field-group">
+              <label for="business-model">Business Model</label>
+              <select id="business-model" name="businessModel" required>
+                <option value="">Select business model</option>
+                <option>Subscription</option>
+                <option>Commission</option>
+                <option>Direct Sales</option>
+                <option>Freemium</option>
+                <option>Advertising</option>
+                <option>Other</option>
+              </select>
+              <span class="field-error" id="business-model-error"></span>
+            </div>
+
+            <div class="field-group">
+              <label for="time-available">Time Available</label>
+              <select id="time-available" name="timeAvailable" required>
+                <option value="">Select time</option>
+                <option>Less than 5 hours/week</option>
+                <option>5–10 hours/week</option>
+                <option>10–20 hours/week</option>
+                <option>Full-time</option>
+              </select>
+              <span class="field-error" id="time-available-error"></span>
+            </div>
+          </div>
+
+          <div class="form-column">
+            <div class="field-group">
+              <label for="problem">Problem you're solving</label>
+              <textarea id="problem" name="problem" rows="3" placeholder="Describe the problem..." required></textarea>
+              <span class="field-error" id="problem-error"></span>
+            </div>
+
+            <div class="field-group">
+              <label for="budget">Budget</label>
+              <div class="budget-input">
+                <span aria-hidden="true">₹</span>
+                <input id="budget" name="budget" type="text" inputmode="decimal" placeholder="10,000" required>
+              </div>
+              <span class="field-error" id="budget-error"></span>
+            </div>
+
+            <div class="field-group skills-group">
+              <label>Your Skills</label>
+              <div class="skills-box" id="skills-box" aria-live="polite">
+                <div class="skill-tags" id="skill-tags">
+                  <button class="skill-tag" type="button" data-skill="Marketing">Marketing <span aria-hidden="true">×</span></button>
+                  <button class="skill-tag" type="button" data-skill="Coding">Coding <span aria-hidden="true">×</span></button>
+                  <button class="skill-tag" type="button" data-skill="Design">Design <span aria-hidden="true">×</span></button>
+                </div>
+                <div class="skill-inputs">
+                  <div class="custom-skill-row">
+                    <input type="text" id="custom-skill" list="preset-skills" placeholder="Type or select a skill..." class="custom-skill-field" autocomplete="off">
+                    <datalist id="preset-skills">
+                      <option value="Python"></option>
+                      <option value="Java"></option>
+                      <option value="C"></option>
+                      <option value="C++"></option>
+                      <option value="JavaScript"></option>
+                      <option value="TypeScript"></option>
+                      <option value="HTML"></option>
+                      <option value="CSS"></option>
+                      <option value="React"></option>
+                      <option value="Angular"></option>
+                      <option value="Vue.js"></option>
+                      <option value="Node.js"></option>
+                      <option value="Express.js"></option>
+                      <option value="Flask"></option>
+                      <option value="Django"></option>
+                      <option value="PHP"></option>
+                      <option value=".NET"></option>
+                      <option value="SQL"></option>
+                      <option value="MySQL"></option>
+                      <option value="PostgreSQL"></option>
+                      <option value="MongoDB"></option>
+                      <option value="Firebase"></option>
+                      <option value="REST API"></option>
+                      <option value="Git"></option>
+                      <option value="GitHub"></option>
+                      <option value="Docker"></option>
+                      <option value="Linux"></option>
+                      <option value="AWS"></option>
+                      <option value="Google Cloud"></option>
+                      <option value="Azure"></option>
+                      <option value="Machine Learning"></option>
+                      <option value="Deep Learning"></option>
+                      <option value="Artificial Intelligence"></option>
+                      <option value="Generative AI"></option>
+                      <option value="Data Science"></option>
+                      <option value="Data Analytics"></option>
+                      <option value="Power BI"></option>
+                      <option value="Tableau"></option>
+                      <option value="Excel"></option>
+                      <option value="Computer Vision"></option>
+                      <option value="NLP"></option>
+                      <option value="Cybersecurity"></option>
+                      <option value="Blockchain"></option>
+                      <option value="IoT"></option>
+                      <option value="Android Development"></option>
+                      <option value="iOS Development"></option>
+                      <option value="Flutter"></option>
+                      <option value="React Native"></option>
+                      <option value="UI/UX Design"></option>
+                      <option value="Figma"></option>
+                      <option value="Canva"></option>
+                      <option value="Digital Marketing"></option>
+                      <option value="Social Media Marketing"></option>
+                      <option value="SEO"></option>
+                      <option value="Content Marketing"></option>
+                      <option value="Content Writing"></option>
+                      <option value="Copywriting"></option>
+                      <option value="Graphic Design"></option>
+                      <option value="Video Editing"></option>
+                      <option value="Photography"></option>
+                      <option value="Branding"></option>
+                      <option value="Sales"></option>
+                      <option value="Business Development"></option>
+                      <option value="Market Research"></option>
+                      <option value="Customer Research"></option>
+                      <option value="Product Management"></option>
+                      <option value="Project Management"></option>
+                      <option value="Financial Management"></option>
+                      <option value="Communication"></option>
+                      <option value="Leadership"></option>
+                      <option value="Public Speaking"></option>
+                      <option value="Negotiation"></option>
+                      <option value="Customer Support"></option>
+                      <option value="Event Management"></option>
+                      <option value="Entrepreneurship"></option>
+                      <option value="Presentation Skills"></option>
+                    </datalist>
+                    <button type="button" id="add-custom-skill" class="custom-skill-btn">Add</button>
+                  </div>
+                </div>
+              </div>
+              <span class="field-error" id="skills-error"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-footer">
+          <a class="back-link" href="idea-input.html">← Back</a>
+          <button class="analyze-button" type="submit">Analyze My Startup <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="business-details.js"></script>
+</body>
+</html>

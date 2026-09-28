@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track startup validation progress with StartValidate AI.">
+  <title>Progress Tracker | StartValidate AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="progress.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+  <main class="progress-container">
+    <header class="progress-header">
+      <div>
+        <h1><span class="header-icon" aria-hidden="true">✦</span> Progress Tracker</h1>
+        <p>Track your progress and earn points</p>
+      </div>
+      <span class="level-badge"><span aria-hidden="true">★</span> Level <strong id="level-value">1</strong></span>
+    </header>
+
+    <section class="progress-body" aria-label="Startup validation progress">
+      <div class="overall-section">
+        <div class="progress-circle" id="progress-circle" role="img" aria-label="Overall progress 35 percent">
+          <span class="progress-circle-value" id="overall-value">35%</span>
+        </div>
+        <span class="progress-label">Overall Progress</span>
+      </div>
+
+      <div class="progress-details">
+        <section class="points-section" aria-labelledby="points-title">
+          <h2 id="points-title">Points</h2>
+          <p class="points-value"><strong id="points-value">350</strong> <span>/ 1,000</span></p>
+          <progress class="points-bar" id="points-bar" value="350" max="1000" aria-label="Points earned"></progress>
+        </section>
+
+        <section class="tasks-section" aria-labelledby="tasks-title">
+
+          <h2 id="tasks-title">Completed Tasks</h2>
+          <ul class="task-list" id="task-list"></ul>
+        </section>
+      </div>
+    </section>
+
+    <nav class="progress-navigation" aria-label="Progress navigation">
+      <a href="dashboard.html"><span aria-hidden="true">⌂</span> Home</a>
+      <a href="progress.html" class="is-active"><span aria-hidden="true">◔</span> Progress</a>
+    </nav>
+  </main>
+
+  <script src="progress.js"></script>
+</body>
+</html>

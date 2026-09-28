@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StartValidate AI validation overview dashboard.">
+  <title>Validation Overview | StartValidate AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar">
+      <a class="sidebar-brand" href="dashboard.html" aria-label="StartValidate AI dashboard">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img">
+            <path d="M16.8 4.4c4.1-.9 7.3.1 9.5 2.1.1 2.8-.8 5.5-2.7 8l-6.5 8.2-6.2-6.2 8.2-6.5c2.5-1.9 5.2-2.8 8-2.7" fill="#6875e9" opacity=".24"/>
+            <path d="M16.8 4.4c4.1-.9 7.3.1 9.5 2.1.1 2.8-.8 5.5-2.7 8l-6.5 8.2-6.2-6.2 8.2-6.5c2.5-1.9 5.2-2.8 8-2.7" fill="none" stroke="#b7bcff" stroke-width="1.7" stroke-linejoin="round"/>
+            <circle cx="20.7" cy="10.2" r="2" fill="#b7bcff"/>
+            <path d="m10.9 16.5-4.7 1.4 1.4-4.7m3.6 9.1-1.8 4.2 4.2-1.8" fill="none" stroke="#b7bcff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>StartValidate <strong>AI</strong></span>
+      </a>
+
+      <nav class="sidebar-nav" aria-label="Dashboard navigation">
+        <a class="sidebar-link is-active" href="dashboard.html"><span class="nav-icon" aria-hidden="true">⌂</span><span>Dashboard</span></a>
+        <a class="sidebar-link" href="startups.html"><span class="nav-icon" aria-hidden="true">▣</span><span>My Startups</span></a>
+        <a class="sidebar-link" href="profile.html"><span class="nav-icon" aria-hidden="true">♙</span><span>Profile</span></a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="mobile-topbar">
+        <a class="mobile-brand" href="dashboard.html">StartValidate <strong>AI</strong></a>
+        <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+      <a class="my-startups-link" href="startups.html">← My Startups</a>
+
+      <section class="startup-header" aria-labelledby="startup-title">
+        <div class="startup-identity">
+          <div class="startup-image" aria-hidden="true"><span>🥭</span></div>
+          <div>
+            <h1 id="startup-title">Homemade Achar Business</h1>
+            <p id="startup-description">A platform connecting local home chefs with nearby customers.</p>
+            <span class="category-badge" id="startup-category">Food &amp; Beverage</span>
+          </div>
+        </div>
+        <div class="startup-actions">
+          <p id="analysis-date">Generated: 12 Mar 2025</p>
+          <button type="button" class="secondary-button" id="refresh-btn">Refresh Analysis</button>
+          <a class="primary-button" href="overview.html">View Report <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <div id="loading-overlay" class="loading-overlay" style="display: none;">
+        <div class="spinner"></div>
+        <p>Analyzing your startup...</p>
+      </div>
+
+      <section class="overview-grid" aria-label="Validation summary">
+        <article class="dashboard-card overview-card">
+          <h2>Validation Overview</h2>
+          <div class="score-content">
+            <div class="score-ring" aria-label="Validation score 82 percent"><div><strong>82%</strong><span>Validation Strength</span></div></div>
+            <span class="evidence-badge"><span aria-hidden="true">✦</span> Strong Evidence</span>
+          </div>
+          <p class="overview-note">Your idea addresses a clear customer problem,<br class="desktop-break"> but competition needs further investigation.</p>
+        </article>
+
+        <article class="dashboard-card insights-card">
+          <h2>Quick Insights</h2>
+          <ul class="insights-list">
+            <li><span class="insight-label"><span class="insight-icon market" aria-hidden="true">●</span>Market</span><strong class="status-good">Good potential</strong></li>
+            <li><span class="insight-label"><span class="insight-icon competition" aria-hidden="true">◌</span>Competition</span><strong class="status-moderate">Moderate</strong></li>
+            <li><span class="insight-label"><span class="insight-icon revenue" aria-hidden="true">⌂</span>Revenue</span><strong class="status-good">Promising</strong></li>
+            <li><span class="insight-label"><span class="insight-icon feasibility" aria-hidden="true">●</span>Feasibility</span><strong class="status-good">Strong</strong></li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Removed Roadmap section as requested -->
+    </main>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

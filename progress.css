@@ -1,0 +1,34 @@
+:root {
+  --text: #172554;
+  --muted: #64748b;
+  --purple: #4f46e5;
+  --green: #16a34a;
+  --green-soft: #dcfce7;
+  --gold: #f59e0b;
+  --gold-soft: #fef3c7;
+  --background: #f8fafc;
+  --white: #ffffff;
+  --line: #e2e8f0;
+  --progress-bg: #e2e8f0;
+  --radius: 7px;
+  --shadow: 0 5px 18px rgba(37, 56, 106, .05);
+}
+
+* { box-sizing: border-box; }
+html { min-width: 320px; }
+body { min-height: 100vh; margin: 0; color: var(--text); background: var(--background); font-family: "DM Sans", sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+
+.progress-container { width: min(100% - 22px, 710px); margin: 9px auto; padding: 12px 13px 10px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.progress-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }.progress-header h1 { margin: 0 0 3px; color: var(--text); font-family: "Space Grotesk", sans-serif; font-size: 12px; line-height: 1.1; }.progress-header p { margin: 0; color: var(--muted); font-size: 7px; }.header-icon { color: var(--purple); font-size: 10px; }
+.level-badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 6px; color: var(--text); background: var(--gold-soft); border: 1px solid #f9e7b1; border-radius: 999px; font-size: 7px; font-weight: 500; white-space: nowrap; }.level-badge > span { color: var(--gold); font-size: 9px; }.level-badge strong { font-weight: 600; }
+.progress-body { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 18px; align-items: start; padding: 12px 4px 9px; border-top: 1px solid #f0f3f7; border-bottom: 1px solid #f0f3f7; margin-top: 10px; }
+.overall-section { display: flex; flex-direction: column; align-items: center; }.progress-circle { position: relative; --progress: 35%; display: grid; width: 83px; height: 83px; place-items: center; background: conic-gradient(var(--green) var(--progress), var(--progress-bg) 0); border-radius: 50%; }.progress-circle::before { position: absolute; width: 69px; height: 69px; background: var(--white); border-radius: 50%; content: ""; }.progress-circle-value { position: relative; z-index: 1; color: var(--text); font-family: "Space Grotesk", sans-serif; font-size: 14px; font-weight: 700; }.progress-label { margin-top: 5px; color: var(--muted); font-size: 6px; }
+.progress-details { min-width: 0; }.points-section h2, .tasks-section h2 { margin: 0 0 4px; color: var(--text); font-family: "Space Grotesk", sans-serif; font-size: 8px; line-height: 1; }.points-value { margin: 0 0 5px; color: #8b98ae; font-size: 7px; }.points-value strong { color: var(--text); font-size: 10px; }
+.points-bar { display: block; width: 100%; height: 5px; margin-bottom: 13px; border: 0; border-radius: 8px; appearance: none; }.points-bar::-webkit-progress-bar { background: var(--progress-bg); border-radius: 8px; }.points-bar::-webkit-progress-value { background: var(--purple); border-radius: 8px; }.points-bar::-moz-progress-bar { background: var(--purple); border-radius: 8px; }
+.task-list { display: grid; gap: 6px; padding: 0; margin: 0; list-style: none; }.task-item { display: grid; grid-template-columns: 12px minmax(0, 1fr) auto; gap: 6px; align-items: center; color: #6f7f99; font-size: 7px; }.task-status { display: grid; width: 10px; height: 10px; place-items: center; border: 1px solid #cbd5e1; border-radius: 50%; font-size: 6px; line-height: 1; }.task-item.is-complete .task-status { color: #fff; background: var(--green); border-color: var(--green); }.task-item.is-partial .task-status { border-color: var(--green); background: var(--green-soft); }.task-item.is-complete .task-title, .task-item.is-partial .task-title { color: var(--text); }.task-count { color: #94a3b8; font-size: 6px; white-space: nowrap; }.task-item.is-complete .task-count { color: var(--green); }
+.progress-navigation { display: flex; gap: 18px; padding-top: 9px; }.progress-navigation a { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: 7px; }.progress-navigation a:hover { color: var(--purple); }.progress-navigation span { color: var(--purple); font-size: 10px; }
+
+@media (max-width: 520px) {
+  .progress-container { width: calc(100% - 20px); padding: 11px; }.progress-body { grid-template-columns: 1fr; gap: 13px; justify-items: center; }.progress-details { width: 100%; }.progress-navigation { padding-top: 9px; }.progress-header h1 { font-size: 13px; }
+}

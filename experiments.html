@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Validation Experiment for StartValidate AI.">
+  <title>Validation Experiment | StartValidate AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mvp.css">
+  <link rel="stylesheet" href="experiments.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+  <div class="report-shell">
+    <aside class="sidebar">
+      <a class="sidebar-brand" href="dashboard.html" aria-label="StartValidate AI dashboard">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img">
+            <path d="M16.8 4.4c4.1-.9 7.3.1 9.5 2.1.1 2.8-.8 5.5-2.7 8l-6.5 8.2-6.2-6.2 8.2-6.5c2.5-1.9 5.2-2.8 8-2.7" fill="#6875e9" opacity=".24"/>
+            <path d="M16.8 4.4c4.1-.9 7.3.1 9.5 2.1.1 2.8-.8 5.5-2.7 8l-6.5 8.2-6.2-6.2 8.2-6.5c2.5-1.9 5.2-2.8 8-2.7" fill="none" stroke="#b7bcff" stroke-width="1.7" stroke-linejoin="round"/>
+            <circle cx="20.7" cy="10.2" r="2" fill="#b7bcff"/>
+            <path d="m10.9 16.5-4.7 1.4 1.4-4.7m3.6 9.1-1.8 4.2 4.2-1.8" fill="none" stroke="#b7bcff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>StartValidate <strong>AI</strong></span>
+      </a>
+      <nav class="sidebar-nav" aria-label="Dashboard navigation">
+        <a class="sidebar-link" href="dashboard.html"><span class="nav-icon" aria-hidden="true">⌂</span><span>Dashboard</span></a>
+        <a class="sidebar-link is-active" href="startups.html"><span class="nav-icon" aria-hidden="true">▣</span><span>My Startups</span></a>
+        <a class="sidebar-link" href="profile.html"><span class="nav-icon" aria-hidden="true">♙</span><span>Profile</span></a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="mobile-topbar">
+        <a class="mobile-brand" href="dashboard.html">StartValidate <strong>AI</strong></a>
+        <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+
+      <header class="report-header">
+        <div class="report-title-row">
+          <span class="report-icon" aria-hidden="true">✦</span>
+          <h1 id="startup-name">Loading...</h1>
+        </div>
+
+        <nav class="report-tabs" aria-label="Startup report sections">
+          <a class="report-tab" href="overview.html">Overview</a>
+          <a class="report-tab" href="market.html">Market</a>
+          <a class="report-tab" href="competition.html">Competition</a>
+          <a class="report-tab" href="business.html">Business</a>
+          <a class="report-tab" href="risks.html">Risks</a>
+          <a class="report-tab" href="mvp.html">MVP</a>
+        </nav>
+      </header>
+
+      <section class="experiments-content" aria-labelledby="experiments-title">
+        <h2 id="experiments-title">Validation Experiment</h2>
+        <p class="mvp-subtitle">Turn your startup idea into real-world evidence.</p>
+        <p class="experiments-subtitle" id="experiments-desc">Loading startup information...</p>
+
+        <div class="validation-card">
+          <h3>Your Validation Steps</h3>
+          <ul class="step-list" id="step-list">
+             <!-- Steps injected via JS -->
+             <li><p>Loading startup report...</p></li>
+          </ul>
+        </div>
+
+        <div class="validation-card progress-card">
+          <div class="progress-header">
+            <h3>Your Progress</h3>
+            <div class="progress-stats">
+              <span class="progress-count" id="progress-count">0 of 0 steps completed</span>
+              <span class="progress-percentage" id="progress-percentage">0%</span>
+            </div>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="progress-bar"></div>
+          </div>
+          
+          <div class="completion-message" id="completion-message">
+            <h4>Validation experiment completed! 🎉</h4>
+            <p>Great job — you have completed all the recommended validation steps.</p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="experiments.js"></script>
+</body>
+</html>

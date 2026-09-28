@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manage your startup ideas with StartValidate AI.">
+  <title>My Startups | StartValidate AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="startups.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar">
+      <a class="sidebar-brand" href="dashboard.html" aria-label="StartValidate AI dashboard">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img">
+            <path d="M16.8 4.4c4.1-.9 7.3.1 9.5 2.1.1 2.8-.8 5.5-2.7 8l-6.5 8.2-6.2-6.2 8.2-6.5c2.5-1.9 5.2-2.8 8-2.7" fill="#6875e9" opacity=".24"/>
+            <path d="M16.8 4.4c4.1-.9 7.3.1 9.5 2.1.1 2.8-.8 5.5-2.7 8l-6.5 8.2-6.2-6.2 8.2-6.5c2.5-1.9 5.2-2.8 8-2.7" fill="none" stroke="#b7bcff" stroke-width="1.7" stroke-linejoin="round"/>
+            <circle cx="20.7" cy="10.2" r="2" fill="#b7bcff"/>
+            <path d="m10.9 16.5-4.7 1.4 1.4-4.7m3.6 9.1-1.8 4.2 4.2-1.8" fill="none" stroke="#b7bcff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>StartValidate <strong>AI</strong></span>
+      </a>
+      <nav class="sidebar-nav" aria-label="Dashboard navigation">
+        <a class="sidebar-link" href="dashboard.html"><span class="nav-icon" aria-hidden="true">⌂</span><span>Dashboard</span></a>
+        <a class="sidebar-link is-active" href="startups.html"><span class="nav-icon" aria-hidden="true">▣</span><span>My Startups</span></a>
+        <a class="sidebar-link" href="profile.html"><span class="nav-icon" aria-hidden="true">♙</span><span>Profile</span></a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="mobile-topbar">
+        <a class="mobile-brand" href="dashboard.html">StartValidate <strong>AI</strong></a>
+        <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+
+      <header class="page-header">
+        <div>
+          <h1>My Startups</h1>
+          <p>Manage and track all your startup ideas.</p>
+        </div>
+        <a class="new-startup-button" href="idea-input.html"><span aria-hidden="true">+</span> New Startup</a>
+      </header>
+
+      <section class="startup-grid" id="startup-grid" aria-label="Your startups"></section>
+      <section class="empty-state" id="empty-state" aria-live="polite">
+        <h2>No startups yet</h2>
+        <p>Create your first startup idea to begin validation.</p>
+        <a class="new-startup-button" href="idea-input.html"><span aria-hidden="true">+</span> Create Startup</a>
+      </section>
+    </main>
+  </div>
+  <div class="modal-overlay" id="delete-modal" aria-hidden="true">
+    <div class="modal-content">
+      <h2>Delete Startup</h2>
+      <p>Are you sure you want to delete this startup?</p>
+      <div class="modal-actions">
+        <button class="button-secondary" id="cancel-delete" type="button">No</button>
+        <button class="button-danger" id="confirm-delete" type="button">Yes, Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="startups.js"></script>
+</body>
+</html>
